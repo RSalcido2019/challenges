@@ -11,7 +11,7 @@ class Image
     end
   end
 
-  def blur(distance=3)
+  def blur(distance=1)
     distance.times do
       transformer
     end
@@ -51,5 +51,5 @@ image = Image.new([
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 1]
 ])
-image.blur
+image.blur(3)
 image.output_image
