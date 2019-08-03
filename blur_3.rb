@@ -10,7 +10,7 @@ class Image
       puts row.join
     end
   end
-
+# I change the distance to equal 3 and then to 1 and got the same results. Later I decided to add it after I called the method below. 
   def blur(distance=1)
     distance.times do
       transformer
@@ -51,5 +51,6 @@ image = Image.new([
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 1]
 ])
+# placed the distance here instead of in def blur(distance=3) results are the same Manhattan distance of 3
 image.blur(3)
 image.output_image
